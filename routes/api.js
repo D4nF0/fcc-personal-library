@@ -52,6 +52,7 @@ module.exports = function (app) {
             _id: savedData._id, 
             title: savedData.title,
           });
+          
         } else {
           res.send({ error: "error has occured" });
         };
@@ -93,7 +94,7 @@ module.exports = function (app) {
 
       }).catch(( err ) => {
         console.log( err );
-        res.send({ error: "error has occured" });
+        res.send( "no book exists" );
       });
     
     })
@@ -137,7 +138,7 @@ module.exports = function (app) {
 
       }).catch(( err ) => {
         console.log( err );
-        res.send({ error: "error has occured" });
+        res.send( "no book exists" );
       });
     
     })
@@ -156,7 +157,7 @@ module.exports = function (app) {
 
       }).catch(( err ) => {
         console.log( err );
-        res.send({ error: "error has occured 3" });
+        res.send( "no book exists" );
       });
 
     });
